@@ -1,5 +1,6 @@
 //Note: each reducer is named after the resulting store's state property, with the action.type not necessarily needing to correspond. Each reducer will return a discrete property of the state, regardless of how many conditions are inside that reducer.
 
+
 export const cards = (
   state = {
     interested: [],

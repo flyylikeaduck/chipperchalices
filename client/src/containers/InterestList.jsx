@@ -3,8 +3,13 @@ import { connect } from 'react-redux';
 import { Card, CardHeader, CardTitle, CardText } from 'material-ui/Card';
 
 import JobCard from './JobCard.jsx';
+import { fetchCards } from '../actions/index.js';
 
 class InterestList extends Component {
+
+  componentDidMount() {
+    this.props.fetchCards('Interested');
+  }
 
   render() {
     if (this.props.hasErrored) {
@@ -35,3 +40,4 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(InterestList);
+

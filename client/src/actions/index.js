@@ -43,6 +43,7 @@ export const fetchCardsSuccess = (interested, applied, interviewScheduled, inter
 //   };
 // };
 
+
 export const cardsAreFetched = (bool) => {
   return {
     type: 'CARDS_ARE_FETCHED',
@@ -64,6 +65,7 @@ export const cardsHasErrored = (bool) => {
 
 export const fetchCards = (status) => {
   console.log('sstatus from ACTION CREATOR', status);
+
   return (dispatch) => {
     dispatch(cardsAreFetched(true));
 
